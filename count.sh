@@ -15,7 +15,7 @@ count_size_kb () { #arg1 = directory
   sum=0
   dir="$1"
   for n in $(find $dir -exec stat -c%b {} +); do let "sum+=n" ; done
-  let "sum+=sum/2"
+  let "sum=sum/2"
   echo $sum
 
 }
